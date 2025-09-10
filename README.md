@@ -1,4 +1,4 @@
-### Movie App
+# Movie App
 
 This is a single-page application built with React that displays a list of popular movies by fetching data from a third-party API. The application is designed to be responsive and provide a simple, clean user experience for browsing movie titles.
 
