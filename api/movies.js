@@ -1,17 +1,18 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import fetch from 'node-fetch';
 
-const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY; // This name should match the one in Vercel
+const API_KEY = process.env.API_KEY; // This name should match the one in Vercel
+console.log(API_KEY)
 
 export default async (request, response) => {
-  if (!REACT_APP_API_KEY) {
+  if (!API_KEY) {
     return response.status(500).json({ error: 'API key not configured.' });
   }
 
   const { title } = request.query;
 
   try {
-    const omdbResponse = await fetch(`http://www.omdbapi.com/?apikey=${REACT_APP_API_KEY}&s=${title}`);
+    const omdbResponse = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`);
     const data = await omdbResponse.json();
 
     response.status(200).json(data);
