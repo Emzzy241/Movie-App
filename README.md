@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+### Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page application built with React that displays a list of popular movies by fetching data from a third-party API. The application is designed to be responsive and provide a simple, clean user experience for browsing movie titles.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+#### Features
 
-### `npm start`
+- Displays a list of currently popular movies.
+- Fetches movie data from a public API.
+- Built using React for a dynamic user interface.
+- A search bar to allow users to search for specific movies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Project Setup
 
-### `npm test`
+To get a local copy up and running, follow these steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Prerequisites
 
-### `npm run build`
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later) or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Emzzy241/Movie-App.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+```bash
+cd Movie-App
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install the dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Environment Variables
+This project requires an API key to fetch movie data. A .env file is used to manage this key locally. API key can be gotten from: https://omdbapi.com/apikey.aspx, and select the free version
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Create a file named .env in the root of the project directory.
 
-## Learn More
+Add your API key to this file in the following format, where [your-api-key] is your actual key:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+REACT_APP_MOVIE_API_KEY=your-api-key-from-omdb-api
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note: The variable name must be prefixed with REACT_APP_ as per the Create React App convention for client-side environment variables.
 
-### Code Splitting
+Running the Application
+To start the development server, run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Bash
+```bash
+npm start
+# or
+yarn start
+The application will be available at http://localhost:3000.
+```
 
 ### Deployment
+The application is hosted on Vercel. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For successful deployment, the REACT_APP_MOVIE_API_KEY environment variable must be configured within the Vercel project settings under Environment Variables.
 
-### `npm run build` fails to minify
+### App Link
+Click the link below to view the live app hosted on vercel:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://movie-l7nzbtg7c-dynastys-projects-932344db.vercel.app/
+
+### Project Structure
+```bash
+    src/: Contains all the source code for the React application.
+
+    src/components/: Reusable React components.
+
+    src/App.js: The main application component.
+
+    src/index.js: The entry point for the React application.
+```
+
+### Future Improvements
+
+* Add detailed movie pages with information such as plot summaries, cast, and ratings.
+
+* Introduce state management with Redux or the React Context API for a more scalable architecture.
+
+* Optimize performance with lazy loading or code splitting.
+
+* Implement error handling for API failures and network issues.
+
+### Contact
+For any questions or suggestions, please open an issue in this repository.
