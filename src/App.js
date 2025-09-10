@@ -5,9 +5,9 @@ import MovieCard from "./MovieCard";
 import "./App.css";
 import SearchIcon from "./search.svg"
 
-const API_URL = `http://www.omdbapi.com?apikey=${process.env.REACT_APP_API_KEY}`
+const API_URL = `http://www.omdbapi.com?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`
 
-console.log(process.env.REACT_APP_API_KEY)
+console.log(process.env.REACT_APP_MOVIE_API_KEY)
 
 // const movie1 = {
 //     "Title": "Spiderman and Grandma",
@@ -16,6 +16,8 @@ console.log(process.env.REACT_APP_API_KEY)
 //     "Type": "movie",
 //     "Poster": "https://m.media-amazon.com/images/M/MV5BMjE3Mzg0MjAxMl5BMl5BanBnXkFtZTcwNjIyODg5Mg@@._V1_SX300.jpg"
 // }
+
+// Setting things right
 
 const App = () => {
 
